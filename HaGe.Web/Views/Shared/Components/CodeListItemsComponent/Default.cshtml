@@ -1,0 +1,49 @@
+﻿@model List<HaGe.Application.Models.CodeListModel>
+@{
+    if (Model.Any())
+    {
+        foreach (var item in Model)
+        {
+            <div class="col-xl-6">
+                <div class="card card-dashed h-xl-100 flex-row flex-stack flex-wrap p-6">
+
+                    <div class="d-flex flex-column py-2">
+                        <div class="d-flex align-items-center fs-4 fw-bolder">
+                            @item.Title - (@item.KeyValue)
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column py-2" style="width:100%!important;">
+                        <div class="d-flex align-items-center">
+                            @*data-placeholder="Select an option" data-hide-search="true"*@
+                            <select name="@item.Id" id="@item.Id" data-group="@item.Group" style="width: 100% !important;" data-listing="codeListSelect" class="form-select form-select-solid form-select-lg fw-bold fs-6 text-gray-700 js-select2" data-id="@item.Id">
+                                <option value="">Choose your @item.Title</option>
+                                @{
+                                    foreach (var val in item.CodeListValues)
+                                    {
+                                        <option value="@val.Id" data-codelist="@item.Id">@val.Title</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center py-2">
+                        <button type="reset" class="btn btn-sm btn-light btn-active-light-primary me-3 delete-code-list-item" data-action-delete="codeList" data-id="@item.Id" data-group="@item.Group">Delete</button>
+                        <button class="btn btn-sm btn-light btn-active-light-primary me-3 edit-code-list-item" data-action-edit="codeList" data-bs-toggle="modal" data-bs-target="#kt_modal_new_value" data-id="@item.Id" data-group="@item.Group">Edit</button>
+                        @*<button class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_value"  data-id="@item.Id">Add</button>*@
+                    </div>
+                </div>
+            </div> 
+        }
+    }
+    else
+    {
+        <div class="col-xl-12">
+            <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed h-lg-100 p-6">
+                <div class="d-flex flex-stack flex-grow-1 flex-wrap flex-md-nowrap">
+                    No data available
+                </div>
+            </div>
+        </div>
+    }
+}
+

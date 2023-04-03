@@ -1,0 +1,15 @@
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\bin\Release\net6.0\HaGe.Infrastructure.deps.json
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\bin\Release\net6.0\HaGe.Infrastructure.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\bin\Release\net6.0\HaGe.Infrastructure.pdb
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\bin\Release\net6.0\HaGe.Core.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\bin\Release\net6.0\HaGe.Core.pdb
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\obj\Release\net6.0\HaGe.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\obj\Release\net6.0\HaGe.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\obj\Release\net6.0\HaGe.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\obj\Release\net6.0\HaGe.Infrastructure.AssemblyInfo.cs
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\obj\Release\net6.0\HaGe.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\obj\Release\net6.0\HaGe.Infrastructure.csproj.CopyComplete
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\obj\Release\net6.0\HaGe.Infrastructure.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\obj\Release\net6.0\refint\HaGe.Infrastructure.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\obj\Release\net6.0\HaGe.Infrastructure.pdb
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HaGe.Infrastructure\obj\Release\net6.0\ref\HaGe.Infrastructure.dll

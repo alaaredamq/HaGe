@@ -1,0 +1,131 @@
+html, body{
+    margin: 0;
+}
+
+.header{
+    background: var(--bs-primary);
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    -webkit-box-shadow: 0px 10px 21px -5px rgba(0,0,0,0.3);
+    box-shadow: 0px 10px 21px -5px rgba(0,0,0,0.35);
+    border: none;
+    display: block;
+}
+        
+.logo{
+    margin-left: 150px;
+    margin-top: 25px;
+}
+
+.menu-toolbar{  
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    width: 500px;
+    display: flex;
+    margin-left: -250px;
+    justify-content: space-between;
+}
+
+.avatar{
+    position: absolute;
+    top: 25px;
+    right: 150px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar img{
+    border-radius: 50%;
+}
+
+.avatar a{
+    color: white;
+    text-decoration: none;
+}
+
+.menu-item-tab{
+    background: none;
+    position: relative;
+}
+
+.menu-item-title{
+    text-align: center;
+    padding-bottom: 5px;
+    color: white;
+    font-size: 1.1rem;
+    background: var(--bs-primary);
+}
+
+.active .menu-item-title{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.menu-toolbar ul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu-toolbar ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+.menu-toolbar .active .menu-item{
+    /*display: flex;*/
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    width: 80px;
+    align-items: center;
+}
+
+.header .header-content{
+    color: white;
+    position: absolute;
+    font-size: large;
+    left: 20%;
+    top: 30%;
+    width: 700px;
+}
+
+.header .headerButton{
+    position: absolute;
+    top: 350px;
+    right: 400px;
+}
+.header .headerButton button{
+    height: 55px;
+    width: 200px;
+    background: var(--bs-secondary);
+    border: none;
+    color: white;
+    font-size: medium;
+    transition: .3s background ;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.header .headerButton button:hover{
+    background: var(--bs-over-primary);
+    transition: .3s background ;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

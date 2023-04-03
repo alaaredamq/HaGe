@@ -1,0 +1,107 @@
+﻿@model HaGe.Web.Models.DropdownListModel
+@{
+    var isMultitags = "data-allow-clear='true' multiple='multiple'";
+    var hideSearch = "data-hide-search=true";
+    var allowClear = "data-allow-clear=true";
+
+    var isMulti = Model.Tags;
+    var classOther = "";
+
+    if (string.IsNullOrEmpty(Model.ModalId)){
+        if (isMulti){
+            <div class="selectwithTags multi">
+                <select class="@Model.CssClass" id="@Model.Name" name="@Model.Name" data-placeholder="@Model.PlaceHolder" multiple="multiple" data-codelistid="@Model.CodeListId">
+                    @{
+
+                        foreach (var item in Model.Items)
+                        {
+                            classOther = "";
+                            if (item.Text.ToLower().Contains("other"))
+                            {
+                                classOther = "hasOther";
+                            }
+                            if (item.Selected)
+                            {
+                                <option value="@item.Value" selected="selected" class="@classOther" data-title="@item.Text" data-name="@Model.Name">@item.Text</option>
+                            }
+                            else
+                            {
+                                <option value="@item.Value" class="@classOther" data-title="@item.Text" data-name="@Model.Name">@item.Text</option>
+                            }
+                        }
+                    }
+                </select>
+            </div>
+        }else{
+            <select id="@Model.Name" name="@Model.Name" data-isModal="False" data-control="@Model.Control" data-placeholder="@Model.PlaceHolder" class="@Model.CssClass" @(Model.Required ? "required" : "") @(Model.IsMultiple ? isMultitags : "") @(Model.HideSearch ? hideSearch : "") @(Model.AllowClear ? allowClear : "") data-allow-clear="true" data-hide-search="true" data-codelistid="@Model.CodeListId">
+                @{
+                    foreach (var item in Model.Items)
+                    {
+                        classOther = "";
+                        if (item.Text.ToLower().Contains("other"))
+                        {
+                            classOther = "hasOther";
+                        }
+                        if (item.Selected)
+                        {
+                            <option value="@item.Value" selected="selected" class="@classOther" data-title="@item.Text" data-name="@Model.Name">@item.Text</option>
+                        }
+                        else
+                        {
+                            <option value="@item.Value" class="@classOther" data-title="@item.Text" data-name="@Model.Name">@item.Text</option>
+                        }
+                    }
+                }
+            </select>
+        }
+    }else{
+        if (isMulti){
+            <div class="selectwithTags multi">
+                <select class="@Model.CssClass" id="@Model.Name" name="@Model.Name" data-placeholder="@Model.PlaceHolder" multiple="multiple" data-codelistid="@Model.CodeListId">
+                    @{
+                        foreach (var item in Model.Items)
+                        {
+                            classOther = "";
+                            if (item.Text.ToLower().Contains("other"))
+                            {
+                                classOther = "hasOther";
+                            }
+                            if (item.Selected)
+                            {
+                                <option value="@item.Value" selected="selected" class="@classOther" data-title="@item.Text" data-name="@Model.Name">@item.Text</option>
+                            }
+                            else
+                            {
+                                <option value="@item.Value" class="@classOther" data-title="@item.Text" data-name="@Model.Name">@item.Text</option>
+                            }
+                        }
+                    }
+                </select>
+            </div>
+        }else{
+            <select id="@Model.Name" name="@Model.Name" data-isModal="True" data-control="@Model.Control" data-placeholder="@Model.PlaceHolder" class="@Model.CssClass" data-dropdown-parent="#@Model.ModalId" @(Model.Required ? "required" : "") @(Model.IsMultiple ? isMultitags : "") @(Model.HideSearch ? hideSearch : "") @(Model.AllowClear ? allowClear : "") data-allow-clear="true" data-hide-search="true" data-codelistid="@Model.CodeListId">
+                @{
+                    foreach (var item in Model.Items)
+                    {
+                        classOther = "";
+                        if (item.Text.ToLower().Contains("other"))
+                        {
+                            classOther = "hasOther";
+                        }
+                        if (item.Selected)
+                        {
+                            <option value="@item.Value" selected="selected" class="@classOther" data-title="@item.Text" data-name="@Model.Name">@item.Text</option>
+                        }
+                        else
+                        {
+                            <option value="@item.Value" class="@classOther" data-title="@item.Text" data-name="@Model.Name">@item.Text</option>
+                        }
+                    }
+                }
+            </select>
+        }
+
+
+    }
+}
+

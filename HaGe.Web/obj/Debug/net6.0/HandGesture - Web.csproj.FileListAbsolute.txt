@@ -1,0 +1,62 @@
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\appsettings.json
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\HandGesture - Web.staticwebassets.runtime.json
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\HandGesture - Web.exe
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\HandGesture - Web.deps.json
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\HandGesture - Web.runtimeconfig.json
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\HandGesture - Web.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\HandGesture - Web.pdb
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\HandGesture - Web.csproj.AssemblyReference.cache
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\HandGesture - Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\HandGesture - Web.AssemblyInfoInputs.cache
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\HandGesture - Web.AssemblyInfo.cs
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\HandGesture - Web.csproj.CoreCompileInputs.cache
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\HandGesture - Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\HandGesture - Web.RazorAssemblyInfo.cache
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\HandGesture - Web.RazorAssemblyInfo.cs
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\scopedcss\bundle\HandGesture - Web.styles.css
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\scopedcss\projectbundle\HandGesture - Web.bundle.scp.css
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\HandGesture - Web.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\refint\HandGesture - Web.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\HandGesture - Web.pdb
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\HandGesture - Web.genruntimeconfig.cache
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\ref\HandGesture - Web.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Humanizer.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\redal\RiderProjects\Hand Gesture Recognition\HandGesture - Web\obj\Debug\net6.0\HandGesture - Web.csproj.CopyComplete

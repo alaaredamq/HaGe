@@ -1,0 +1,62 @@
+﻿@model HaGe.Application.Models.SettingsModel
+<!--begin::Content wrapper-->
+<div class="d-flex flex-column flex-column-fluid">
+    <!--begin::Content-->
+    <div id="kt_app_content" class="app-content flex-column-fluid">
+        <!--begin::Content container-->
+        <div id="kt_app_content_container" class="app-container container-xxl">
+            @{
+                foreach (var group in Model.CodeLists) {
+                    var name = group.Key;
+                    <!--begin::Payment methods-->
+                    <div class="card mb-5 mb-xl-10">
+                        <!--begin::Card header-->
+                        <div class="card-header card-header-stretch pb-0" role="button" data-bs-toggle="collapse" data-bs-target="#kt_details-@name" aria-expanded="false" aria-controls="kt_details-@name">
+                            <!--begin::Title-->
+                            <div class="card-title">
+                                <h3 class="m-0">@name Module</h3>
+                            </div>
+                            <!--end::Title-->
+                            <!--begin::Toolbar-->
+                            <div class="card-toolbar m-0">
+                                <a href="#" id="add_code_list_button" class="btn btn-primary align-self-center" data-bs-toggle="modal" data-bs-target="#kt_modal_new_code_list" data-group="@name">Add Code List</a>
+                            </div>
+                            <!--end::Toolbar-->
+                        </div>
+                        <!--end::Card header-->
+                        <!--begin::Tab content-->
+                        @*show*@
+                        <div id="kt_details-@name" class="card-body collapse ">
+                            <!--begin::Tab panel-->
+                            <div id="kt_billing_creditcard" class="tab-pane fade show active" role="tabpanel">
+                                <!--begin::Title-->
+                                @*<h3 class="mb-5">My Cards</h3>*@
+                                <!--end::Title-->
+                                <!--begin::Row-->
+                                <div class="row gx-9 gy-6" id="codeListItems-@name">
+                                    @await Component.InvokeAsync("CodeListItemsComponent", new { group = name })
+                                </div>
+                                <!--end::Row-->
+                            </div>
+                            <!--end::Tab panel-->
+
+                        </div>
+                        <!--end::Tab content-->
+                    </div>
+                    <!--end::Payment methods-->
+                }
+            }
+
+            <partial name="_CodeListModals"/>
+
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+</div>
+
+<!--end::Content-->
+
+@section Scripts {
+    <script src="/Scripts/Settings/CodeList.js"></script>
+}
