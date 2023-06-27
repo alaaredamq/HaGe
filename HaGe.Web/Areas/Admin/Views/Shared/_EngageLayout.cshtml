@@ -27,7 +27,7 @@
     <link href="~/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
     <link href="~/assets/css/style.bundle.css" rel="stylesheet" type="text/css"/>
     <link href="~/assets/css/site.css" rel="stylesheet" type="text/css"/>
-    @await RenderSectionAsync("Styles", required: false)
+    @* @await RenderSectionAsync("Styles", required: false) *@
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -53,8 +53,8 @@
 <!--begin::Page Custom Javascript(used by this page)-->
 <!--end::Page Custom Javascript-->
 <!--end::Javascript-->
-@await Html.PartialAsync("_foot")
-@await RenderSectionAsync("Scripts", required: false)
+@Html.Partial("_foot")
+@* @await RenderSectionAsync("Scripts", required: false) *@
 </body>
 <!--end::Body-->
 </html>

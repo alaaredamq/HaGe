@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Xmw4FW6pAJ33jiJlGUN87FkpCfWtOopIAzesjEsOimfvBMrrgofvN1dcFTKvKtq9W4AYAHnagzlGSiiPB9OADg==",
+  "dgSpecHash": "vbYarcvAD4Lr80a6qJaM9WAPaF1Kxq+SU/+OxjN/0O34E85vOr2gti1n82JVmAJ05i8BJkNpq6Lr7k/ublVheg==",
   "success": true,
   "projectFilePath": "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Core\\HaGe.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\redal\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\redal\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\redal\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512"
+  ],
   "logs": []
 }

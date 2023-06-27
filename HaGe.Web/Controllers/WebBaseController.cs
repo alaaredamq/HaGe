@@ -1,7 +1,7 @@
 ﻿using System.Security.Claims;
 using HaGe.Core.Entities;
 using HaGe.Infrastructure.Context;
-
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -9,6 +9,7 @@ using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 namespace HaGe.Web.Controllers;
 
+[Authorize(AuthenticationSchemes = "UserScheme")]
 public class WebBaseController : Controller {
     protected HaGeContext db => (HaGeContext)HttpContext.RequestServices.GetService(typeof(HaGeContext));
 
@@ -17,7 +18,9 @@ public class WebBaseController : Controller {
 
     public static bool IsLoggedUser;
     public static Guid LoggedUserId;
+    public static Guid LoggedProfileId;
     public static User? LoggedUser;
+    public static Profile? LoggedProfile;
 
     public WebBaseController(IHostingEnvironment hostingEnvironment, IHttpContextAccessor httpContextAccessor) {
         _hostingEnvironment = hostingEnvironment;
@@ -45,9 +48,11 @@ public class WebBaseController : Controller {
 
                 var user = db.User.FirstOrDefault(x => x.Id == LoggedUserId);
                 if (user == null) return;
-                {
-                    LoggedUser = user;
-                }
+                LoggedUser = user;
+                var profile = db.Profile.FirstOrDefault(x => x.UserId == LoggedUserId);
+                if (profile == null) return;
+                LoggedProfileId = profile.Id;
+                LoggedProfile = profile;
             }
         }
     }

@@ -15,6 +15,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\HaGe.Application\HaGe.Application.csproj" />
+      <ProjectReference Include="..\HaGe.Core\HaGe.Core.csproj" />
+      <ProjectReference Include="..\HaGe.WebV1\HaGe.WebV1.csproj" />
       <ProjectReference Include="..\HaGe.Web\HaGe.Web.csproj" />
     </ItemGroup>
 

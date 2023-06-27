@@ -1,4 +1,5 @@
-﻿using HaGe.Application.Models.Base;
+﻿using System;
+using HaGe.Application.Models.Base;
 using Newtonsoft.Json;
 
 namespace HaGe.Application.Models;

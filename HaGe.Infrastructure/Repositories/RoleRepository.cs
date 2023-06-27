@@ -1,4 +1,6 @@
-﻿using HaGe.Core.Entities;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using HaGe.Core.Entities;
 using HaGe.Core.Repositories;
 using HaGe.Infrastructure.Context;
 using HaGe.Infrastructure.Repositories.Base;

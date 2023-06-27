@@ -1,4 +1,8 @@
-﻿using HaGe.Application.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using HaGe.Application.Models;
 using HaGe.Core.Entities;
 
 namespace HaGe.Application.Interfaces; 

@@ -1,4 +1,6 @@
-﻿namespace HaGe.Application.Helpers; 
+﻿using System.Collections.Generic;
+
+namespace HaGe.Application.Helpers; 
 
 public static class Helper {
     public static void Move<T>(this List<T> list, T item, int newIndex)
@@ -16,6 +18,5 @@ public static class Helper {
                 list.Insert(newIndex, item);
             }
         }
-
     }
 }

@@ -29,6 +29,12 @@
               "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Application\\HaGe.Application.csproj": {
                 "projectPath": "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Application\\HaGe.Application.csproj"
               },
+              "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Core\\HaGe.Core.csproj": {
+                "projectPath": "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Core\\HaGe.Core.csproj"
+              },
+              "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.WebV1\\HaGe.WebV1.csproj": {
+                "projectPath": "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.WebV1\\HaGe.WebV1.csproj"
+              },
               "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Web\\HaGe.Web.csproj": {
                 "projectPath": "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Web\\HaGe.Web.csproj"
               }
@@ -73,6 +79,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -81,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\redal\\.dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -127,6 +151,10 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[10.0.1, )"
@@ -143,12 +171,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\redal\\.dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -196,12 +238,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\redal\\.dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -263,12 +319,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\redal\\.dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -297,9 +367,6 @@
               "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Application\\HaGe.Application.csproj": {
                 "projectPath": "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Application\\HaGe.Application.csproj"
               },
-              "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Core\\HaGe.Core.csproj": {
-                "projectPath": "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Core\\HaGe.Core.csproj"
-              },
               "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Infrastructure\\HaGe.Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Infrastructure\\HaGe.Infrastructure.csproj"
               }
@@ -324,6 +391,10 @@
               "target": "Package",
               "version": "[6.0.13, )"
             },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.0-preview1.23109.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.13, )"
@@ -331,6 +402,10 @@
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
               "version": "[6.0.13, )"
             },
@@ -360,6 +435,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -368,7 +461,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\redal\\.dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

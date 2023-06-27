@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System;
+using AutoMapper;
 using HaGe.Application.Models;
 using HaGe.Core.Entities;
 using Profile = AutoMapper.Profile;

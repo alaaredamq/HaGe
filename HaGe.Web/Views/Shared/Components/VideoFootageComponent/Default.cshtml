@@ -1,0 +1,55 @@
+﻿@{
+    KTTheme.AddJavascriptFile("js/custom/Video/VideoFootage.js");
+}
+<input hidden id="LoggedUserId" name="LoggedUserId" value="@Model.LoggedUserId"/>
+<input hidden id="LoggedProfileId" name="LoggedProfileId" value="@Model.LoggedProfileId"/>
+<input hidden id="Level" name="Level" value="@Model.Level"/>
+<!--begin::Engage widget 10-->
+<div class="card card-flush h-md-100">
+    <!--begin::Body-->
+    <div class="card-body d-flex flex-column justify-content-between bgi-no-repeat bgi-size-cover bgi-position-x-center video_container" style="background-position: 100% 50%; background-image:url(@KTTheme.GetAssetPath("media/stock/900x600/42.png"))">
+        <ul class="nav nav-pills nav-pills-custom mb-3" role="tablist">
+            <!--begin::Item-->
+            @for (int i = 0; i < 3; i++) {
+                <li class="nav-item mb-3 me-3 me-lg-6" role="presentation">
+                    <!--begin::Link-->
+                    @{
+                        var classActive = i == Model.Level ? "active" : "";
+                        var opacity = i > Model.Level ? 0.7 : 1;
+                    }
+                    <a class="nav-link d-flex justify-content-between flex-column flex-center overflow-hidden @classActive w-80px h-85px py-4" disabled="@(i > Model.Level ? true: false)" data-bs-toggle="pill" href="#kt_stats_widget_1_tab_1" aria-selected="true" role="tab" style="opacity: @opacity">
+                        <!--begin::Icon-->
+                        <div class="nav-icon">
+                            <img alt="" src="metronic8/demo1/assets/media/svg/brand-logos/beats-electronics.svg" class="">
+                        </div>
+                        <!--end::Icon-->
+
+                        @{
+                            var levelIncremented = i + 1;
+                        }
+                        <!--begin::Subtitle-->
+                        <span class="nav-text text-gray-700 fw-bold fs-6 lh-1">
+                            Level @levelIncremented
+                        </span>
+                        <!--end::Subtitle-->
+
+                        <!--begin::Bullet-->
+                        <span class="bullet-custom position-absolute bottom-0 w-100 h-4px bg-primary"></span>
+                        <!--end::Bullet-->
+                    </a>
+                    <!--end::Link-->
+                </li>
+                <!--end::Item-->
+            }
+
+
+        </ul>
+        @* <label class="form-check form-switch form-check-custom form-check-solid"> *@
+        @*     <input class="form-check-input" type="checkbox" value="1" checked="checked"> *@
+        @* </label> *@
+        @* <video class="mw-100 w-100" id="camera_footage" name="camera_footage" autoplay loop muted playsinline></video> *@
+        <a class="btn btn-primary" id="launch_python">Start Training</a>
+    </div>
+    <!--end::Body-->
+</div>
+<!--end::Engage widget 10-->

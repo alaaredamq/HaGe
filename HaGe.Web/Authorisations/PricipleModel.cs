@@ -1,4 +1,6 @@
-﻿namespace HaGe.Web.Authorisations; 
+﻿using System;
+
+namespace HaGe.Web.Authorisations; 
 
 public class PrincipleModel
 {

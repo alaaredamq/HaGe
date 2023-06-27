@@ -5,6 +5,7 @@ namespace HaGe.Core.Entities;
 
 public class Level : BaseEntity, IEntityBase<Guid> {
     public string Name { get; set; }
+    public string TrainingPath { get; set; }
     public double MaxExp { get; set; }
     public int TotalSteps { get; set; }
     public Guid? ParentId { get; set; }

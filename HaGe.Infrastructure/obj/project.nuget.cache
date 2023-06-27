@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EzdBOVjuN76Jk6IrnV/ZZS3xXLZbTqeXaDhUJtGx8jh0bT4ruRYM5qyNPYDaxn53RpwfpKOJ3rBt5HZdDm5SsA==",
+  "dgSpecHash": "nHxrV7MCk9e1mIlg04/8J9FxTKWYH04WHej8uUJAV7CcWhxwTvGTSGCNrZzaWB4jACpGbm+I/DyXvIfmXQqM7w==",
   "success": true,
   "projectFilePath": "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Infrastructure\\HaGe.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -24,7 +24,10 @@
     "C:\\Users\\redal\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\redal\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\redal\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
-    "C:\\Users\\redal\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\redal\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\redal\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\redal\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\redal\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512"
   ],
   "logs": []
 }

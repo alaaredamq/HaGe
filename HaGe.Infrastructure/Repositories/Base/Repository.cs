@@ -1,4 +1,5 @@
-﻿using HaGe.Core.Entities.Base;
+﻿using System;
+using HaGe.Core.Entities.Base;
 using HaGe.Core.Repositories.Base;
 using HaGe.Infrastructure.Context;
 

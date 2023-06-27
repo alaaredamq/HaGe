@@ -1,4 +1,6 @@
-﻿namespace HaGe.Application.Models {
+﻿using System;
+
+namespace HaGe.Application.Models {
     public class RegisterViewModel {
         public string FirstName { get; set; }
         public string LastName { get; set; }

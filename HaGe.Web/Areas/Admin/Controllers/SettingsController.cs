@@ -1,4 +1,5 @@
-﻿using AutoMapper.Internal.Mappers;
+﻿using System;
+using AutoMapper.Internal.Mappers;
 using HaGe.Application.Interfaces;
 using HaGe.Application.Mapper;
 using HaGe.Application.Models;

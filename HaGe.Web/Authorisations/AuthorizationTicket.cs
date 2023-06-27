@@ -1,13 +1,16 @@
-﻿using System.Security.Claims;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
 using HaGe.Core.Entities;
 using HaGe.Infrastructure.Context;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 
 namespace HaGe.Web.Authorisations;
 
 public class AuthorisationTicket {
-    public static void InitialiseTicket(string userName, HttpResponse Response, HttpContext context, HaGeContext me,
+    public static void InitialiseTicket(string userName, HttpResponse Response, HttpContext context, HaGeContext me, out User newUser,
         bool RememberMe = true, string Scheme = "UserScheme") {
         
         PrincipleModel serializeModel = new PrincipleModel();
@@ -28,6 +31,7 @@ public class AuthorisationTicket {
         var props = new AuthenticationProperties();
         props.IsPersistent = RememberMe;
 
+        newUser = user;
         Response.HttpContext.SignInAsync(Scheme, principal, props).Wait();
     }
 }
