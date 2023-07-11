@@ -26,11 +26,10 @@ const renderVideo = () => {
 const LaunchPython = () => {
     $("#launch_python").on("click", function () {
         var link = "http://localhost:5000/trigger";
-        if ($("#LevelName").val().length > 0){
-            link += $("#LevelName").val();
-        } else {
-            link += "Easy";
-        }
+        if ($("#ParentName").val().length > 0){
+            link += $("#ParentName").val();
+        } 
+        // }
         // if ($("#Level").val() == "1") {
         //     link = "http://localhost:5000/triggerEasy";
         // } else if($("#Level").val() == "2") {
@@ -43,42 +42,78 @@ const LaunchPython = () => {
         // formData.append('path', $("#Level").val())
         $.ajax({
             url: link,
-            processType: false,
+            processData: false,
             contentType: false,
             method: "POST",
             // data: formData,
             success: function (data) {
-                if (parseFloat(data.stars) > 0) {
-                    nextLevel();
+                if (data.sentence_written.length > 0) {
+                    // remove the first character if it is a whitespace
+                    if (data.sentence_written[0] == " ") {
+                        data.sentence_written = data.sentence_written.substring(1);
+                    }
+                    var words = data.sentence_written.split(" ");
+                    var word = "";
+                    var comb = "";
+                    if (words.length > 1) {
+                        word = "words";
+                        words.forEach(element => {
+                            comb += "<strong>" + element + "</strong>, ";
+                        }); 
+                        // remove last comma
+                        comb = comb.substring(0, comb.length - 2);
+                    } else {
+                        word = "word";
+                        comb = "<strong>" + words[0] + "</strong>";
+                    }
+                    
+                    var levelName = $("#LevelName").val();
+                    if (data.sentence_written.includes(levelName)) {
+                        // if (parseFloat(data.stars) > 0) {
+                        nextLevel();
+                        updateStats(data);
+                        // }
+                    } else {
+                        Swal.fire({
+                            title: "Opps!",
+                            html: "Good job for trying the words <strong>" + comb + "</strong>, but to unlock the next level you should sign the word <strong>" + levelName + "</strong>!",
+                            icon: "error",
+                            buttonsStyling: false,
+                            confirmButtonText: "Ok, got it!",
+                            customClass: {
+                                confirmButton: "btn btn-primary"
+                            }
+                        })
+                    }
+                    // updateStats(data);
+                    // if (parseFloat(data.stars) < 2) {
+                    //     Swal.fire({
+                    //         title: "Opps!",
+                    //         text: "Try again and get a higher score to unlock next level!",
+                    //         icon: "error",
+                    //         buttonsStyling: false,
+                    //         confirmButtonText: "Ok, got it!",
+                    //         customClass: {
+                    //             confirmButton: "btn btn-primary"
+                    //         }
+                    //     })
+                    // } else {
+                    //     Swal.fire({
+                    //         title: "Good job!",
+                    //         html: "You have Passed this level!<br>Here are your stats:<br><br>Words Spoken: " + data.sentence_written + "<br>Stars: " + data.stars+ "<br>Score: " + data.score + "<br>Time: " + parseInt(data.session_length) + " seconds",
+                    //         icon: "success",
+                    //         buttonsStyling: false,
+                    //         confirmButtonText: "Ok, got it!",
+                    //         customClass: {
+                    //             confirmButton: "btn btn-primary"
+                    //         }
+                    //     }).then(function () {
+                    //         updateStats(data);
+                    //         nextLevel();
+                    //     })
+                    // }
+                    console.log(data)
                 }
-                // updateStats(data);
-                // if (parseFloat(data.stars) < 2) {
-                //     Swal.fire({
-                //         title: "Opps!",
-                //         text: "Try again and get a higher score to unlock next level!",
-                //         icon: "error",
-                //         buttonsStyling: false,
-                //         confirmButtonText: "Ok, got it!",
-                //         customClass: {
-                //             confirmButton: "btn btn-primary"
-                //         }
-                //     })
-                // } else {
-                //     Swal.fire({
-                //         title: "Good job!",
-                //         html: "You have Passed this level!<br>Here are your stats:<br><br>Words Spoken: " + data.sentence_written + "<br>Stars: " + data.stars+ "<br>Score: " + data.score + "<br>Time: " + parseInt(data.session_length) + " seconds",
-                //         icon: "success",
-                //         buttonsStyling: false,
-                //         confirmButtonText: "Ok, got it!",
-                //         customClass: {
-                //             confirmButton: "btn btn-primary"
-                //         }
-                //     }).then(function () {
-                //         updateStats(data);
-                //         nextLevel();
-                //     })
-                // }
-                console.log(data)
             },
             error: function (data) {
                 console.error(data)
@@ -147,7 +182,7 @@ const updateStats = (data) => {
     
     $.ajax({
         url: "/updateStats",
-        processType: false,
+        processData: false,
         contentType: false,
         method: "POST",
         data: formData,

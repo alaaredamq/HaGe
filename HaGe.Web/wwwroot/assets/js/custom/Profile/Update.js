@@ -19,7 +19,7 @@ const initUpdateProfile = () => {
             url: url,
             method: method,
             data: data,
-            processType: false,
+            processData: false,
             contentType: false,
             success: function (response) {
                 if (response.status == 200) {

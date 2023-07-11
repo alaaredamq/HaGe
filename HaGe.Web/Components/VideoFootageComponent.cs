@@ -38,6 +38,9 @@ public class VideoFootageComponent : ViewComponent {
                      else {
                          model.LevelName = level.Name;
                      }
+
+                     model.ParentName = level.ParentId == Guid.Parse("1bbcdeb7-85d4-4ac9-a642-25460ab89d19") ? "Easy" :
+                         level.ParentId == Guid.Parse("f1aa55bc-0e78-4583-af58-6727524fd5c2") ? "Medium" : "Hard";
                      model.Level = profile?.LevelUnlocked ?? -1;
                      model.LockOrder = profile?.LevelUnlocked ?? -1;
 
@@ -61,5 +64,6 @@ public class VideoFootageComponent : ViewComponent {
         public string LevelPath { get; set; }
         public int LockOrder { get; set; }
         public string LevelName { get; set; }
+        public string ParentName { get; set; }
     }
 }
