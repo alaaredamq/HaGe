@@ -15,4 +15,14 @@ public class LevelRepository: Repository<Level>, ILevelRepository {
         return level;
     }
     
+    public List<Level> GetLevels(List<Guid> levelProgressionsIds) {
+        var levels = Entities.Where(x => levelProgressionsIds.Contains(x.Id)).ToList();
+        return levels != null && levels.Any() ? levels : new List<Level>();
+    }
+    
+    public List<Level> GetAllLevels() {
+        var levels = Entities.ToList();
+        return levels != null && levels.Any() ? levels : new List<Level>();
+    }
+    
 }

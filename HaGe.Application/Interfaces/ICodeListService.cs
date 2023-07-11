@@ -9,6 +9,7 @@ namespace HaGe.Application.Interfaces;
 
 public interface ICodeListService {
     Task<CodeList> GetKeyValue(string keyValue);
+    CodeListValue GetCodeListById(Guid id);
     Task<IEnumerable<CodeListValueModel>> GetCodeListValue(Guid id);
     Task<IEnumerable<CodeListValueModel>> GetCodeAllListValue();
     Task<IEnumerable<CodeListModel>> GetCodeLists();

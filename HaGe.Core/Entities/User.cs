@@ -23,6 +23,7 @@ public class User : BaseEntity, IEntityBase<Guid> {
     public Guid? RoleId { get; set; }
 
     public bool AccountActivated { get; set; } = false;
+    public bool IsFirstLogin { get; set; } = true;
     public string? ProfilePhoto { get; set; }
     public int? Status { get; set; }
 
@@ -49,6 +50,7 @@ public class User : BaseEntity, IEntityBase<Guid> {
         Password = password;
         Status = 0;
         LastLogin = SqlDateTime.MinValue.Value;
+        RoleId = Guid.Parse("fbb0e569-3e9c-4538-8105-8e610d49743a");
     }
 
     public User (){}

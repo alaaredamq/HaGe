@@ -13,7 +13,7 @@ namespace HaGe.Web.Controllers;
 public class WebBaseController : Controller {
     protected HaGeContext db => (HaGeContext)HttpContext.RequestServices.GetService(typeof(HaGeContext));
 
-    private readonly IHostingEnvironment _hostingEnvironment;
+    protected readonly IHostingEnvironment _hostingEnvironment;
     private readonly IHttpContextAccessor _httpContextAccessor;
 
     public static bool IsLoggedUser;

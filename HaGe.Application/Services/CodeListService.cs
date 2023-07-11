@@ -63,6 +63,10 @@ public class CodeListService : ICodeListService {
         return codeLists.FirstOrDefault(x => x.KeyValue == keyValue);
     }
 
+    public CodeListValue GetCodeListById(Guid id) {
+        return _codeListValueRepository.GetById(id);
+    }
+
     public IQueryable<CodeListValue> GetAllValues() {
         return _codeListValueRepository.Table;
     }

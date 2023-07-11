@@ -18,7 +18,7 @@ public class VideoFootageComponent : ViewComponent {
         _levelService = levelService;
     }
 
-    public async Task<IViewComponentResult> InvokeAsync(HttpContext httpContext) {
+    public async Task<IViewComponentResult> InvokeAsync(HttpContext httpContext, Guid levelId) {
         var model = new LoggedUserModel();
         var IsLoggedUser = httpContext.User.Identity.IsAuthenticated;
 
@@ -30,12 +30,23 @@ public class VideoFootageComponent : ViewComponent {
 
                  var profile = _profileRepository.GetByUserId(model.LoggedUserId);
                  model.LoggedProfileId = profile?.Id ?? Guid.Empty;
-                 model.Level = profile?.LevelUnlocked ?? -1;
+                 var level = _levelService.GetById(levelId);
+                 if (profile != null) {
+                     if (level.ParentId == Guid.Parse("1bbcdeb7-85d4-4ac9-a642-25460ab89d19") && level.Name.ToLower().Contains("quiz")) {
+                         model.LevelName = "Easy";
+                     }
+                     else {
+                         model.LevelName = level.Name;
+                     }
+                     model.Level = profile?.LevelUnlocked ?? -1;
+                     model.LockOrder = profile?.LevelUnlocked ?? -1;
 
-                 if (model.Level > 0) {
-                     var level = _levelService.GetByOrder(model.Level);
-                     model.LevelPath = level.TrainingPath;
                  }
+                 // if (model.Level > 0) {
+                     // var level = _levelService.GetByOrder(model.Level);
+                     // model.LevelPath = level.TrainingPath;
+                     // model.LevelName = level.Name;
+                 // }
              }
         }
 
@@ -48,5 +59,7 @@ public class VideoFootageComponent : ViewComponent {
         public Guid LoggedProfileId { get; set; }
         public int Level { get; set; }
         public string LevelPath { get; set; }
+        public int LockOrder { get; set; }
+        public string LevelName { get; set; }
     }
 }

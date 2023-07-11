@@ -140,7 +140,7 @@ const Login = () => {
         dataType: 'json',
         success: function (response) {
             if (response.success)
-                window.location.href = "/";
+                window.location.href = "/Dashboards/Level";
             else
                 Swal.fire({
                     icon: 'error',

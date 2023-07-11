@@ -32,9 +32,6 @@
               "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Core\\HaGe.Core.csproj": {
                 "projectPath": "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Core\\HaGe.Core.csproj"
               },
-              "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.WebV1\\HaGe.WebV1.csproj": {
-                "projectPath": "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.WebV1\\HaGe.WebV1.csproj"
-              },
               "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Web\\HaGe.Web.csproj": {
                 "projectPath": "C:\\Users\\redal\\RiderProjects\\Hand Gesture Recognition\\HaGe.Web\\HaGe.Web.csproj"
               }
@@ -422,6 +419,18 @@
             "Microsoft.EntityFrameworkCore.Tools.DotNet": {
               "target": "Package",
               "version": "[2.0.3, )"
+            },
+            "Python.Runtime.NETStandard": {
+              "target": "Package",
+              "version": "[3.7.1, )"
+            },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "pythonnet_netstandard_py37_win": {
+              "target": "Package",
+              "version": "[2.5.2, )"
             }
           },
           "imports": [

@@ -39,5 +39,8 @@ public class HaGeRunDtoMapper : Profile
         
         CreateMap<CodeListValue, CodeListValueModel>();
         CreateMap<CodeListValueModel, CodeListValue>();
+        
+        CreateMap<Level, LevelModel>();
+        CreateMap<LevelModel, Level>();
     }
 }
