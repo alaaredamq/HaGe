@@ -73,8 +73,11 @@ const LaunchPython = () => {
                         comb = "<strong>" + words[0] + "</strong>";
                     }
                     
+                    
                     var levelName = $("#LevelName").val();
-                    if (data.sentence_written.includes(levelName)) {
+                    if ((levelName == "Easy" && data.sentence_written.includes("No") && data.sentence_written.includes("Dinner") && data.sentence_written.includes("Please"))
+                    || levelName == "Medium" && data.sentence_written.includes("Meat") && data.sentence_written.includes("Pasta") && data.sentence_written.includes("Thank You")
+                    || (levelName != "Easy" && levelName != "Medium")) {
                         // if (parseFloat(data.stars) > 0) {
                         nextLevel();
                         updateStats(data);
@@ -184,6 +187,7 @@ const updateStats = (data) => {
     }
     
     formData.append('stats', JSON.stringify(list));
+    formData.append('levelId', $("#LevelId").val());
     
     // });
     

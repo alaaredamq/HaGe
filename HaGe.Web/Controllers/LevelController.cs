@@ -33,7 +33,7 @@ public class LevelController : WebBaseController {
 
     [HttpPost]
     [Route("/updateStats")]
-    public IActionResult UpdateStats(List<WordOccurence> stats) {
+    public IActionResult UpdateStats(List<WordOccurence> stats, Guid levelId) {
         var words = Request.Form["stats"][1];
         // [object Object],[{"Word":"Meat","Count":0},{"Word":"Pasta","Count":0},{"Word":"Thank You","Count":1}]
         // custom parsing of the string to get the list of words and their occurences
@@ -44,18 +44,42 @@ public class LevelController : WebBaseController {
             var count = item.Split(":")[2].Replace("}", "").Replace("]", "");
             list.Add(new WordOccurence(word, int.Parse(count)));
         }
-        
+
+        var mainLevel = _levelService.GetById(levelId);
+        if (mainLevel == null) return Json(new {success = false, message = "Level not found"});
+        var mainProg = 0;
+
         if (LoggedProfile !=  null) {
+            var total = 0;
             foreach (var item in list) {
                 if (item.Count == 0)
                     continue;
+                // var level = _levelService.GetAllLevels().FirstOrDefault(x => x.Name.ToLower() == item.Word.ToLower());
+                // if (level == null) return Json(new {success = false, message = "Level not found"});
+                total += item.Count;
+            }
+
+            foreach (var item in list) {
+                var percentage = 0;
+                if (item.Word == mainLevel.Name) {
+                    percentage = (int) ((item.Count / (double) total) * 100);
+                }
+                
                 var level = _levelService.GetAllLevels().FirstOrDefault(x => x.Name.ToLower() == item.Word.ToLower());
                 if (level == null) return Json(new {success = false, message = "Level not found"});
+                
                 for (int i = 0; i < item.Count; i++) {
                     var prog = new LevelProgression(LoggedProfileId, level.Id);
                     db.LevelProgression.Add(prog);
+
+                    prog.Percentage = percentage;
+                    mainProg = mainProg >= percentage ? mainProg : percentage;
                 }
             }
+            var mainprog = new LevelProgression(LoggedProfileId, mainLevel.Id);
+            mainprog.Percentage = mainProg;
+            db.LevelProgression.Add(mainprog);
+
             db.SaveChanges();
             return Json(new {success = true});
         }

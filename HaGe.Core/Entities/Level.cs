@@ -13,6 +13,7 @@ public class Level : BaseEntity, IEntityBase<Guid> {
     public string? Image { get; set; }
     public string? VideoUrl { get; set; }
     public int LockOrder { get; set; }
+    public int? Percentage { get; set; }
 
     public Level(string name, int order) {
         Name = name;

@@ -23,7 +23,7 @@ public class LevelModel {
     public User? User { get; set; }
     public Profile? Profile { get; set; }
     public string? VideoUrl { get; set; }
-    public int Percentage { get; set; }
+    public int? Percentage { get; set; }
     public Dictionary<string,int> Occurences { get; set; }
     
     public LevelModel() {

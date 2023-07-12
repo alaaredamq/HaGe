@@ -81,22 +81,22 @@
                 <!--end::Label-->
             </div>
             <!--end::Stat-->
-            <!--begin::Stat-->
-            <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                <!--begin::Number-->
-                <div class="d-flex align-items-center">
-                    <i class="ki-duotone ki-arrow-down fs-3 text-danger me-2">
-                        <span class="path1"></span>
-                        <span class="path2"></span>
-                    </i>
-                    <div class="fs-2 fw-bold counted" data-kt-countup="true" data-kt-countup-value="5" data-kt-initialized="1">5</div>
-                </div>
-                <!--end::Number-->
-                <!--begin::Label-->
-                <div class="fw-semibold fs-6 text-gray-400">Total stars</div>
-                <!--end::Label-->
-            </div>
-            <!--end::Stat-->
+            @* <!--begin::Stat--> *@
+            @* <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3"> *@
+            @*     <!--begin::Number--> *@
+            @*     <div class="d-flex align-items-center"> *@
+            @*         <i class="ki-duotone ki-arrow-down fs-3 text-danger me-2"> *@
+            @*             <span class="path1"></span> *@
+            @*             <span class="path2"></span> *@
+            @*         </i> *@
+            @*         <div class="fs-2 fw-bold counted" data-kt-countup="true" data-kt-countup-value="5" data-kt-initialized="1">5</div> *@
+            @*     </div> *@
+            @*     <!--end::Number--> *@
+            @*     <!--begin::Label--> *@
+            @*     <div class="fw-semibold fs-6 text-gray-400">Total stars</div> *@
+            @*     <!--end::Label--> *@
+            @* </div> *@
+            @* <!--end::Stat--> *@
             <!--begin::Stat-->
             <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
                 <!--begin::Number-->
@@ -105,7 +105,7 @@
                         <span class="path1"></span>
                         <span class="path2"></span>
                     </i>
-                    <div class="fs-2 fw-bold counted" data-kt-countup="true" data-kt-countup-value="85" data-kt-countup-prefix="%" data-kt-initialized="1">%85</div>
+                    <div class="fs-2 fw-bold counted" id="HighScore" data-kt-countup="true" data-kt-countup-value="85" data-kt-countup-prefix="%" data-kt-initialized="1"></div>
                 </div>
                 <!--end::Number-->
                 <!--begin::Label-->
@@ -213,13 +213,20 @@
             <div class="d-flex flex-wrap mb-5">
                 <!--begin::Due-->
                 <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-7 mb-3">
-                    <div class="fs-6 text-gray-800 fw-bold tries">@level.NumberOfTries</div>
+                    <div class="fs-6 text-gray-800 fw-bold tries">@level.NumberOfTries - 1 </div>
                     <div class="fw-semibold text-gray-400">Number Of tries</div>
                 </div>
                 <!--end::Due-->
                 <!--begin::Budget-->
                 <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 mb-3">
-                    <div class="fs-6 text-gray-800 fw-bold">85%</div>
+                    @{
+                        var percent = string.IsNullOrEmpty(level.Percentage.ToString()) ? 0 : level.Percentage;
+
+                        if (level.Name == "Quiz" && level.NumberOfTries > 0) {
+                            percent = 100;
+                        }
+                    }
+                    <div class="fs-6 text-gray-800 fw-bold highestScore">@percent%</div>
                     <div class="fw-semibold text-gray-400">Highest score</div>
                 </div>
                 <!--end::Budget-->
