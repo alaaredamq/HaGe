@@ -58,7 +58,13 @@ const LaunchPython = () => {
                     if (words.length > 1) {
                         word = "words";
                         words.forEach(element => {
-                            comb += "<strong>" + element + "</strong>, ";
+                            // if (words[index] == "thank" && words[index + 1] == "you") {
+                            //     comb += "<strong>thank you</strong>, ";
+                            //     // remove the next word
+                            //     words.splice(index + 1, 1);
+                            // } else {
+                                comb += "<strong>" + element + "</strong>, ";
+                            // }
                         }); 
                         // remove last comma
                         comb = comb.substring(0, comb.length - 2);
@@ -72,6 +78,7 @@ const LaunchPython = () => {
                         // if (parseFloat(data.stars) > 0) {
                         nextLevel();
                         updateStats(data);
+                        location.href = "/dashboards/Level";
                         // }
                     } else {
                         Swal.fire({

@@ -1,5 +1,9 @@
 ﻿@model HaGe.Application.Models.Base.BaseModel
 
+@{
+    KTTheme.AddJavascriptFile("js/custom/account/Level.js");
+}
+
 <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
 <!--begin::Content wrapper-->
 <div class="d-flex flex-column flex-column-fluid">
@@ -15,7 +19,7 @@
 <!--begin: Pic-->
 <div class="me-7 mb-4">
     <div class="symbol symbol-100px symbol-lg-160px symbol-fixed position-relative">
-        <img src="@Model.User.ProfilePhoto" alt="image">
+        <img src="@Model.User.ProfilePhoto" alt="image" style="object-fit: cover">
         <div class="position-absolute translate-middle bottom-0 start-100 mb-6 bg-success rounded-circle border border-4 border-body h-20px w-20px"></div>
     </div>
 </div>
@@ -69,7 +73,7 @@
                         <span class="path1"></span>
                         <span class="path2"></span>
                     </i>
-                    <div class="fs-2 fw-bold counted" data-kt-countup="true" data-kt-countup-value="2" data-kt-countup-prefix="$" data-kt-initialized="1">2</div>
+                    <div class="fs-2 fw-bold counted" id="tries_total" data-kt-countup="true" data-kt-countup-value="2" data-kt-countup-prefix="$" data-kt-initialized="1"></div>
                 </div>
                 <!--end::Number-->
                 <!--begin::Label-->
@@ -209,7 +213,7 @@
             <div class="d-flex flex-wrap mb-5">
                 <!--begin::Due-->
                 <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-7 mb-3">
-                    <div class="fs-6 text-gray-800 fw-bold">@level.NumberOfTries</div>
+                    <div class="fs-6 text-gray-800 fw-bold tries">@level.NumberOfTries</div>
                     <div class="fw-semibold text-gray-400">Number Of tries</div>
                 </div>
                 <!--end::Due-->

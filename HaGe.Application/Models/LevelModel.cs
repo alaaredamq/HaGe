@@ -22,4 +22,11 @@ public class LevelModel {
     public bool? IsActive { get; set; }
     public User? User { get; set; }
     public Profile? Profile { get; set; }
+    public string? VideoUrl { get; set; }
+    public int Percentage { get; set; }
+    public Dictionary<string,int> Occurences { get; set; }
+    
+    public LevelModel() {
+        Occurences = new Dictionary<string, int>();
+    }
 }

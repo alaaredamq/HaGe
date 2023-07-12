@@ -15,7 +15,7 @@
             <!--begin: Pic-->
             <div class="me-7 mb-4">
                 <div class="symbol symbol-100px symbol-lg-160px symbol-fixed position-relative">
-                    <img src="@Model.User.ProfilePhoto" alt="image">
+                    <img src="@Model.User.ProfilePhoto" alt="image" style="object-fit: cover">
                     <div class="position-absolute translate-middle bottom-0 start-100 mb-6 bg-success rounded-circle border border-4 border-body h-20px w-20px"></div>
                 </div>
             </div>
@@ -101,8 +101,11 @@
                                     <span class="path2"></span>
                                 </i>
                                 <!--begin::Inputs-->
-                                <input type="file" name="avatar" id="ProfilePhoto" accept=".png, .jpg, .jpeg">
-                                <input type="hidden" name="avatar_remove">
+                                <div class="fv-row">
+                                    <input type="file" name="ProfilePhoto" id="ProfilePhoto" accept=".png, .jpg, .jpeg">
+                                    <div class="fv-plugins-message-container invalid-feedback"></div>
+                                    <input type="hidden" name="avatar_remove">
+                                </div>
                                 <!--end::Inputs-->
                             </label>
                             <!--end::Label-->
@@ -175,6 +178,7 @@
                     <!--begin::Col-->
                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                         @await Component.InvokeAsync("DropdownListComponent", new { name = "Country", placeholder = "Select Tags", selectedId = Model.User.CountryId.ToString(), list = new List<SelectListItem>(), CodeListName = "country", control = "select2", cssClass = "form-select inputField", modalId = "" })
+                        <div class="fv-plugins-message-container invalid-feedback"></div>
                     </div>
                 </div>
             </div>

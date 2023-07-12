@@ -34,12 +34,27 @@ public class LevelController : WebBaseController {
     [HttpPost]
     [Route("/updateStats")]
     public IActionResult UpdateStats(List<WordOccurence> stats) {
+        var words = Request.Form["stats"][1];
+        // [object Object],[{"Word":"Meat","Count":0},{"Word":"Pasta","Count":0},{"Word":"Thank You","Count":1}]
+        // custom parsing of the string to get the list of words and their occurences
+        var wordsList = words.Split("},{");
+        var list = new List<WordOccurence>();
+        foreach (var item in wordsList) {
+            var word = item.Split(":")[1].Replace("\"", "").Replace(",Count", "");
+            var count = item.Split(":")[2].Replace("}", "").Replace("]", "");
+            list.Add(new WordOccurence(word, int.Parse(count)));
+        }
+        
         if (LoggedProfile !=  null) {
-            foreach (var item in stats) {
+            foreach (var item in list) {
+                if (item.Count == 0)
+                    continue;
                 var level = _levelService.GetAllLevels().FirstOrDefault(x => x.Name.ToLower() == item.Word.ToLower());
                 if (level == null) return Json(new {success = false, message = "Level not found"});
-                var prog = new LevelProgression(LoggedProfileId, level.Id);
-                db.LevelProgression.Add(prog);
+                for (int i = 0; i < item.Count; i++) {
+                    var prog = new LevelProgression(LoggedProfileId, level.Id);
+                    db.LevelProgression.Add(prog);
+                }
             }
             db.SaveChanges();
             return Json(new {success = true});
